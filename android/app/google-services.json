@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15296042593",
+    "project_id": "payments-flutter-webview-app",
+    "storage_bucket": "payments-flutter-webview-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15296042593:android:44468b416acbd619e7fc20",
+        "android_client_info": {
+          "package_name": "net.tosspayments.webview.flutter_webview_sample_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6KPMFdraaFjurLX1e8Ru-Fp6lYFUkuho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
