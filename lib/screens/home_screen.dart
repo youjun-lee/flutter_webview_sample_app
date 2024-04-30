@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text('Toss payments Webview Sample'),
       ),
       body: Center(
         child: Column(
