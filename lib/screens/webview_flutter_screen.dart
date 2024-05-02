@@ -44,7 +44,7 @@ class _WebViewFlutterScreen extends State<WebViewFlutterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Simple Example')),
+      appBar: AppBar(title: const Text('Webview Flutter Sample')),
       body: WebViewWidget(controller: _controller),
     );
   }
