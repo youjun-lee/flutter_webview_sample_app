@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'webview_flutter_screen.dart'; // 웹뷰 스크린을 임포트합니다
 
 class HomeScreen extends StatelessWidget {
+  final TextEditingController urlController = TextEditingController(text: 'http://52.78.198.128/sample/');
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                initialValue: 'http://52.78.198.128/sample/', // 입력 필드의 기본값 설정
+                controller: urlController,
                 decoration: InputDecoration(
                   labelText: 'URL',
                   border: OutlineInputBorder(),
@@ -29,7 +33,10 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  // webview_flutter 화면으로 이동
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WebViewFlutterScreen()),
+                  );
                   print('webview_flutter Launch'); // 추후 기능 추가 예정
                 },
                 child: Text('webview_flutter Launch'),
