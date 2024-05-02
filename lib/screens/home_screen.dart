@@ -35,7 +35,9 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => WebViewFlutterScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => WebViewFlutterScreen(url: urlController.text),
+                    ),
                   );
                   print('webview_flutter Launch'); // 추후 기능 추가 예정
                 },
