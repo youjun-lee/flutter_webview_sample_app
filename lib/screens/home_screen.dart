@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'inappwebview_screen.dart';
 import 'webview_flutter_screen.dart'; // 웹뷰 스크린을 임포트합니다
 
 class HomeScreen extends StatelessWidget {
@@ -58,6 +59,12 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => InAppWebViewScreen(url: urlController.text),
+                    ),
+                    );
                   // inappwebview 화면으로 이동
                   print('inappwebview Launch'); // 추후 기능 추가 예정
                 },
