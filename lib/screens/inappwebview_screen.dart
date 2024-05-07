@@ -21,6 +21,10 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
       appBar: AppBar(title: const Text('InAppWebView Example')),
       body: InAppWebView(
         initialUrlRequest: URLRequest(url: WebUri(widget.url)!),
+        initialSettings: InAppWebViewSettings(
+                useShouldOverrideUrlLoading: true,
+                resourceCustomSchemes: ['intent', 'market']
+        ),
         onWebViewCreated: (controller) {
           _webViewController = controller;
         },
@@ -32,6 +36,13 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
           } else {
             tossPaymentsWebview(uri.toString());
             return NavigationActionPolicy.CANCEL;
+          }
+        },
+        onLoadResourceWithCustomScheme: (controller, scheme) async {
+          List<String> prefixes = ["intent", "market"];
+          RegExp regExp = RegExp("^(${prefixes.map(RegExp.escape).join('|')})");
+          if (regExp.hasMatch(scheme.url.rawValue)) {
+            await _webViewController.stopLoading();
           }
         },
       ),
