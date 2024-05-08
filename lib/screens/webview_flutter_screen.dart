@@ -29,16 +29,15 @@ class _WebViewFlutterScreen extends State<WebViewFlutterScreen> {
           onPageStarted: (String url) {},
           onPageFinished: (String url) {},
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith('https') ||
-                request.url.startsWith("http")) {
+            if (request.url.startsWith('https') ||  request.url.startsWith("http")) { // 표준 웹 URL 체크
               return NavigationDecision.navigate;
             }
-            tossPaymentsWebview(request.url);
+            tossPaymentsWebview(request.url); // 그 외의 경우에는 tossPaymentsWebvew 함수로 검증
             return NavigationDecision.prevent;
           },
         ),
       )
-      ..loadRequest(Uri.parse(widget.url));
+      ..loadRequest(Uri.parse(widget.url));  // 초기에 로드할 URL 설정 (필요시 텍스트 입력)
   }
 
   @override
@@ -50,6 +49,7 @@ class _WebViewFlutterScreen extends State<WebViewFlutterScreen> {
   }
 }
 
+//tosspayments_widget_sdk_flutter 내 외부 카드사 앱 띄울 수 있도록 URL 변경하는 함수 실행
 tossPaymentsWebview(url) {
   final appScheme = ConvertUrl(url); // Intent URL을 앱 스킴 URL로 변환
   if (appScheme.isAppLink()) {

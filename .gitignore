@@ -25,3 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# Google API Key 파일 무시
+GoogleService-Info.plist
+google-services.json

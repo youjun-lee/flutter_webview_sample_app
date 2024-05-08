@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'inappwebview_screen.dart';
-import 'webview_flutter_screen.dart'; // 웹뷰 스크린을 임포트합니다
+import 'webview_flutter_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  final TextEditingController urlController = TextEditingController(text: 'http://52.78.198.128/sample/');
+  final TextEditingController urlController = TextEditingController(text: 'https://developers.tosspayments.com/');
 
 
   @override
@@ -40,7 +40,6 @@ class HomeScreen extends StatelessWidget {
                       builder: (context) => WebViewFlutterScreen(url: urlController.text),
                     ),
                   );
-                  print('webview_flutter Launch'); // 추후 기능 추가 예정
                 },
                 child: Text('webview_flutter Launch'),
                 style: ElevatedButton.styleFrom(
