@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBTl0TYfm2wi55FT_TtkbM4Xebusi5K2Q8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>15296042593</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>net.tosspayments.webview.flutterWebviewSampleApp</string>
+	<key>PROJECT_ID</key>
+	<string>payments-flutter-webview-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>payments-flutter-webview-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:15296042593:ios:c51d910293fc1d14e7fc20</string>
+</dict>
+</plist>
