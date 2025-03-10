@@ -34,7 +34,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
           if (uri.scheme == 'http' || uri.scheme == 'https') { // 표준 웹 URL 체크
             return NavigationActionPolicy.ALLOW;
           } else { // 그 외의 경우에는 tossPaymentsWebvew 함수로 검증
-            tossPaymentsWebview(uri.toString());
+            tossPaymentsWebview(uri.rawValue);
             return NavigationActionPolicy.CANCEL;
           }
         },
